@@ -16,6 +16,9 @@ fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é 
              labels={'Carimbo de data/hora': 'Data e hora', 'Qual o peso?': 'Peso (kg)'},
              template='plotly_dark',
              range_y=[0, 100])
+
+fig.update_layout(legend=dict(orientation='h', y=1.02, x=0.5, xanchor='center'))
+
 st.plotly_chart(fig, use_container_width=True, theme=None)
 
 col1, col2 = st.columns(2)
