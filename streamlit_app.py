@@ -15,6 +15,6 @@ col1.metric('Peso médio Lisi', round(dados[dados['Quem é você?']=='Lisi']['Qu
 col2.metric('Peso médio André', round(dados[dados['Quem é você?']=='André']['Qual o peso?'].mean(),1))
 
 fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é você?', markers=True, title='Monitoramento de peso',
-             labels={'x': 'Eixo X Personalizado', 'y': 'Eixo Y Personalizado'})
+             labels={'Carimbo de data/hora': 'Data e hora', 'Qual o peso?': 'Peso (kg)'})
 st.plotly_chart(fig, use_container_width=True)
 
