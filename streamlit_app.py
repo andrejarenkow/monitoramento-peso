@@ -14,6 +14,7 @@ col1, col2 = st.columns(2)
 col1.metric('Peso médio Lisi', round(dados[dados['Quem é você?']=='Lisi']['Qual o peso?'].mean(),1))
 col2.metric('Peso médio André', round(dados[dados['Quem é você?']=='André']['Qual o peso?'].mean(),1))
 
-fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é você?', markers=True, title='Monitoramento de peso')
+fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é você?', markers=True, title='Monitoramento de peso',
+             labels={'x': 'Eixo X Personalizado', 'y': 'Eixo Y Personalizado'})
 st.plotly_chart(fig, use_container_width=True)
 
