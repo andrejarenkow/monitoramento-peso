@@ -9,4 +9,3 @@ dados['Carimbo de data/hora'] = pd.to_datetime(dados['Carimbo de data/hora'])
 fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é você?', markers=True, title='Monitoramento de peso')
 st.plotly_chart(fig)
 
-st.line_chart(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é você?', title='Monitoramento de peso')
