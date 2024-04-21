@@ -15,7 +15,7 @@ dados['Carimbo de data/hora'] = pd.to_datetime(dados['Carimbo de data/hora'])
 fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é você?', markers=True, title='Monitoramento de peso',
              labels={'Carimbo de data/hora': 'Data e hora', 'Qual o peso?': 'Peso (kg)'},
              template='plotly_dark',
-             range_y=[0, 100])
+             range_y=[0, 150])
 
 fig.update_layout(legend=dict(orientation='h', y=1.02, x=0.5, xanchor='center'))
 
