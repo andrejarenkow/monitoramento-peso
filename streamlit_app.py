@@ -10,7 +10,7 @@ dados = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSiXIJe-xpj
 dados['Qual o peso?'] = pd.to_numeric(dados['Qual o peso?'].str.replace(',','.'))
 dados['Carimbo de data/hora'] = pd.to_datetime(dados['Carimbo de data/hora'])
 
-col1, col2 = st.columns()
+col1, col2 = st.columns(2)
 col1.metric('Peso médio Lisi', dados[dados['Quem é você?']=='Lisi']['Qual o peso?'].mean())
 col2.metric('Peso médio André', dados[dados['Quem é você?']=='André']['Qual o peso?'].mean())
 
