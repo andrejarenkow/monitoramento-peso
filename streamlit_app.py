@@ -16,7 +16,7 @@ col2.metric('Peso médio André', f"{round(dados[dados['Quem é você?']=='Andr�
 
 fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é você?', markers=True, title='Monitoramento de peso',
              labels={'Carimbo de data/hora': 'Data e hora', 'Qual o peso?': 'Peso (kg)'},
-             template='none',
+             template='plotly_dark',
              range_y=[0, 100])
 st.plotly_chart(fig, use_container_width=True, theme=None)
 
