@@ -26,10 +26,9 @@ fig.update_layout(margin=dict(l=20, r=20, t=20, b=20))
 st.plotly_chart(fig, use_container_width=True, theme=None)
 
 # Create Figure beforehand
-fig = plt.figure(figsize=(9, 7))
-sns.lmplot(data=dados, x='Carimbo de data/hora', y='Qual o peso?', hue="Quem é você?")
+sns.relplot(data=dados, x='Carimbo de data/hora', y='Qual o peso?', hue="Quem é você?")
 plt.title("Monitoramento de peso")
-st.pyplot(fig)
+st.pyplot(plt.gcf())
 
 col1, col2 = st.columns(2)
 col1.metric('Média Lisi', f"{round(dados[dados['Quem é você?']=='Lisi']['Qual o peso?'].mean(),1)}")
