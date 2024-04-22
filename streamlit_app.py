@@ -22,9 +22,9 @@ fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é 
 fig.update_layout(legend=dict(orientation='h', y=1.1, x=0.5, xanchor='center'))
 # Ajustando as margens para diminuir as bordas
 fig.update_layout(margin=dict(l=20, r=20, t=20, b=20))
-fig.update_layout(hovermode=False)
+#fig.update_layout(hovermode=False)
 
-st.plotly_chart(fig, use_container_width=True, theme=None)
+st.plotly_chart(fig, use_container_width=True, theme=None, config={})
 
 col1, col2 = st.columns(2)
 col1.metric('Média Lisi', f"{round(dados[dados['Quem é você?']=='Lisi']['Qual o peso?'].mean(),1)}")
