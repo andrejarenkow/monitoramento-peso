@@ -25,3 +25,8 @@ fig.update_layout(margin=dict(l=20, r=20, t=20, b=20))
 
 # Exibe o gráfico no Streamlit, desabilitando todas as interações
 st.plotly_chart(fig, use_container_width=True, theme=None, config={})
+
+# Métricas de peso médio
+col1, col2 = st.columns(2)
+col1.metric('Média Lisi', f"{round(dados[dados['Quem é você?']=='Lisi']['Qual o peso?'].mean(),1)}")
+col2.metric('Média André', f"{round(dados[dados['Quem é você?']=='André']['Qual o peso?'].mean(),1)}")
