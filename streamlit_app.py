@@ -5,6 +5,7 @@ import streamlit as st
 # Configurações da página do Streamlit
 st.set_page_config(
     page_title="Monitoramento peso",
+    page_icon="🍽️",
     layout="centered")  # Define o título da página e a layout centralizada
 
 # Carrega os dados do CSV online
