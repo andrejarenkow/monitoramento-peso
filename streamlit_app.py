@@ -12,7 +12,7 @@ dados['Carimbo de data/hora'] = pd.to_datetime(dados['Carimbo de data/hora'])
 
 
 
-fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é você?', markers=True, title='Monitoramento de peso',
+fig = px.line(dados, x='Carimbo de data/hora', y='Qual o peso?', color='Quem é você?', markers=True, 
              labels={'Carimbo de data/hora': 'Data e hora', 'Qual o peso?': 'Peso (kg)'},
              template='plotly_dark',
              range_y=[0, 150])
