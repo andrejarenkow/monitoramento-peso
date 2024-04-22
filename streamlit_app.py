@@ -28,6 +28,8 @@ st.plotly_chart(fig, use_container_width=True, theme=None)
 # Create Figure beforehand
 sns.relplot(data=dados, x='Carimbo de data/hora', y='Qual o peso?', hue="Quem é você?")
 plt.title("Monitoramento de peso")
+# Rotacionando os ticks do eixo x em 45 graus
+plt.xticks(rotation=45)
 st.pyplot(plt.gcf())
 
 col1, col2 = st.columns(2)
